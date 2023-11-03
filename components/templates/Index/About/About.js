@@ -20,7 +20,7 @@ export default function About() {
                         Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet
                         sed vero dolor sea
                     </h5>
-                    <p className={styles['about__desc']}>
+                    <p className='u__desc'>
                         Takimata sed vero vero no sit sed, justo clita duo no duo amet et,
                         nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet
                         no. Est nonumy sed labore eirmod sit magna. Erat at est justo sit
@@ -37,7 +37,7 @@ export default function About() {
                     <h3 className={styles['about__title']}>
                         our Vision
                     </h3>
-                    <p className={styles['about__desc']}>
+                    <p className='u__desc'>
                         Takimata sed vero vero no sit sed, justo clita duo no duo amet et,
                         nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet
                         no.Labor diam sed ipsum et eirmod
