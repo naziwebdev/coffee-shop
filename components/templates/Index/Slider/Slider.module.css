@@ -63,16 +63,58 @@
    .slider{
     height: 90vh;
    }
+   
+   .slider__text{
+
+    font-size: 2.2rem;
+   }
+   .slider__title{
+
+    font-size: 7rem;
+   }
+
+   .slider__year{
+
+    font-size: 2rem;
+   }
 }
 
 @media only screen and (max-width: 768px) {
   .slider__bg-2{
     background-position:60% 100%;
   }
+
+  .slider__text{
+
+    font-size: 1.8rem;
+   }
+   .slider__title{
+
+    font-size: 5rem;
+   }
+
+   .slider__year{
+
+    font-size: 1.6rem;
+   }
 }
 
 @media only screen and (max-width:450px) {
   .slider{
     height: 70vh;
   }
+
+  .slider__text{
+
+    font-size: 1.1rem;
+   }
+   .slider__title{
+
+    font-size: 2.7rem;
+   }
+
+   .slider__year{
+
+    font-size: 1rem;
+   }
 }

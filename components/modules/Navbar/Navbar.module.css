@@ -90,32 +90,39 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+.navbar__logo{
+  font-size: 2.5rem;
+}
+}
+
 @media only screen and (max-width:578px) {
-  .navbar__hamberger {
-    font-size: 4rem;
-  }
 
   .navbar__logo {
-    font-size: 4.5rem;
+    font-size: 2rem;
+  }
+  .navbar{
+    padding: 2rem;
   }
 }
 
 @media only screen and (max-width:450px) {
-  .navbar__hamberger {
-    font-size: 5rem;
-  }
+ .navbar__hamberger{
+  font-size: 2rem;
+ }
 
-  .navbar__logo {
-    font-size: 5rem;
-  }
 }
 
 @media only screen and (max-width:350px) {
   .navbar__hamberger {
-    font-size: 6rem;
+    font-size: 1.7rem;
   }
 
   .navbar__logo {
-    font-size: 6rem;
+    font-size:1.7rem;
+  }
+
+  .navbar{
+    padding:2rem 1.5rem;
   }
 }

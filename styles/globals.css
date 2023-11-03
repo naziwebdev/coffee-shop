@@ -49,6 +49,9 @@ table {
 	border-spacing: 0;
 }
 
+html{
+	font-size: 100%;
+}
 
 :root{
 	--primary-color:#da9f5b;
@@ -61,35 +64,98 @@ table {
 /*swiper css custom*/
 .swiper-button-prev,
 .swiper-button-next {
-    color: #d0d0d0 !important;
+ color: #d0d0d0 !important;
 	
 }
 /*swiper css custom*/
-/*utility class*/
 
 /*utility class*/
+.u__section-title{
+	font-size: 2rem;
+	color:var(--primary-color);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-align: center;
+	word-spacing: 10px;
+	position: relative;
+}
+
+.u__section-title::before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top:-120px;
+	width: 3px;
+	height: 100px;
+	background-color: var(--primary-color);
+}
+
+.u__section-text{
+	font-size: 4rem;
+	color: var(--secondary-color);
+	font-weight: 600;
+	text-align: center;
+	padding-top: 1rem;
+	line-height: 1.5;
+}
+/*utility class*/
+
 /*responsive*/
 @media only screen and (max-width: 768px) {
-    html{
-		font-size:.8rem;
+   .u__section-title{
+	font-size: 1.8rem;
+   }
+
+   .u__section-text{
+	font-size:3rem;
+   }
+}
+
+@media only screen and (max-width: 578px) {
+	.u__section-title{
+		font-size: 1.5rem;
+	   }
+	
+	   .u__section-text{
+		font-size:2.5rem;
+	   }
+}
+
+@media only screen and (max-width: 450px) {
+	.u__section-title{
+		font-size: 1.4rem;
+	   }
+	
+	   .u__section-text{
+		font-size:2.2rem;
+	   }
+
+	   .u__section-title::before{
+		top:-100px;
+		height: 70px;
+	
 	}
+}
+
+/* @media only screen and (max-width: 768px) {
+   
 }
 
 @media only screen and (max-width: 578px) {
     html{
-		font-size:.6rem;
+		font-size:60%;
 	}
 }
 
 @media only screen and (max-width: 450px) {
     html{
-		font-size:.45rem;
+		font-size:45%;
 	}
 }
 
 @media only screen and (max-width: 350px) {
     html{
-		font-size:.3rem;
+		font-size:30%;
 	}
-}
+} */
 /*responsive*/
