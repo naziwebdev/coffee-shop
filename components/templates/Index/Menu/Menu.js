@@ -1,0 +1,34 @@
+import React from 'react'
+import styles from './Menu.module.css'
+import MenuCard from '@/components/modules/MenuCard/MenuCard'
+
+export default function Menu() {
+    return (
+        <div className={styles['menu']}>
+            <h3 className='u__section-title'>
+                menu & pricing
+            </h3>
+            <h1 className='u__section-text'>
+                competitive pricing
+            </h1>
+            <div className={styles['menu__content']}>
+                <div className={styles['menu__hot-coffee']}>
+                    <h3 className={styles['menu__title']}>hot coffee</h3>
+                    <div className={styles['menu__wrapper']}>
+                        <MenuCard />
+                        <MenuCard />
+                        <MenuCard />
+                    </div>
+                </div>
+                <div className={styles['menu__cold-coffee']}>
+                    <h3 className={styles['menu__title']}>cold coffee</h3>
+                    <div className={styles['menu__wrapper']}>
+                        <MenuCard />
+                        <MenuCard />
+                        <MenuCard />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
