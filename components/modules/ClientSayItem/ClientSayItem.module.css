@@ -1,0 +1,29 @@
+.comment__head {
+    display: flex;
+    column-gap: 1.5rem;
+    align-items: center;
+}
+
+.comment__user-name{
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    padding-bottom: .9rem;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+
+.comment__user-profession{
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.comment__body{
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width:578px) {
+    
+    .comment__user-name{
+        font-size: 1.4rem;
+    }
+}
