@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Testimonial.module.css'
 import ClientSayItem from '@/components/modules/ClientSayItem/ClientSayItem'
 
-export default function Testimonial() {
+export default function Testimonial({comments}) {
   return (
     <div className={styles['testimonial']}>
     <h3 className='u__section-title'>
@@ -12,10 +12,9 @@ export default function Testimonial() {
       our clients say
     </h1>
      <div className={styles['testimonial__content']}>
-          <ClientSayItem/>
-          <ClientSayItem/>
-          <ClientSayItem/>
-          <ClientSayItem/>
+         {comments?.map(comment => (
+          <ClientSayItem key={crypto.randomUUID()} {...comment} />
+         ))}
      </div>
     </div>
   )

@@ -1,7 +1,30 @@
 import React from 'react'
 import styles from './Offer.module.css'
+import { useState } from 'react'
 
 export default function Offer() {
+
+    const [email, setEmail] = useState('')
+
+
+    const addUserEmailHandler = async (event) => {
+        event.preventDefault()
+
+        const res = await fetch('http://localhost:4000/newsletters', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+
+            }, body: JSON.stringify({ email })
+        })
+
+        const result = await res.json()
+
+        console.log(result)
+        setEmail('')
+
+    }
+
     return (
         <div className={styles['offer']}>
             <h1 className={styles['offer__title']}>
@@ -16,9 +39,9 @@ export default function Offer() {
                 </p>
             </div>
             <form className={styles['offer__inform']}>
-                <input type='email' placeholder='Your Email' className={styles['offer__inform-input']} />
-                <button type='submit' className={styles['offer__inform-btn']}>
-                    Sign Up
+                <input type='email' value={email} onChange={(event) => setEmail(event.target.value)} placeholder='Your Email' className={styles['offer__inform-input']} />
+                <button type='submit' onClick={addUserEmailHandler} className={styles['offer__inform-btn']}>
+                   JOIN
                 </button>
             </form>
         </div>
