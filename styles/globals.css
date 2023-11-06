@@ -97,6 +97,7 @@ html{
 	text-align: center;
 	padding-top: 1rem;
 	line-height: 1.5;
+	text-transform: capitalize;
 }
 
 .u__desc {
