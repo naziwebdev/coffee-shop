@@ -3,11 +3,34 @@ import styles from './Navbar.module.css'
 import Link from 'next/link'
 import { IoMdArrowDropdown } from 'react-icons/io'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { FaSearch } from 'react-icons/fa'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Navbar() {
 
   const [toggleSidebar, setTiggleSidebar] = useState(false)
+  const [searchValue, setSearchValue] = useState('')
+  const router = useRouter()
+
+  const searchHandler = () => {
+
+    if (searchValue.trim()) {
+      router.push(`/search?q=${searchValue}`)
+      setSearchValue('')
+    }
+
+  }
+
+  const searchWithEnterHandler = (event) => {
+
+    if (searchValue.trim()) {
+      if (event.keyCode === 13) {
+        router.push(`/search?q=${searchValue}`)
+        setSearchValue('')
+      }
+    }
+  }
 
   return (
     <div className={styles['navbar']}>
@@ -18,7 +41,7 @@ export default function Navbar() {
       {toggleSidebar &&
         <div className={styles['sidebar']}>
           <span className={styles['sidebar__close']}
-           onClick={() => setTiggleSidebar(false)}>&#9747;</span>
+            onClick={() => setTiggleSidebar(false)}>&#9747;</span>
           <ul className={styles['sidebar__nav']}>
             <Link href={'/'} className={`${styles['sidebarr__nav-link']} ${styles['sidebar__active']}`}><li>Home</li></Link>
             <Link href={'/about'} className={styles['sidebar__nav-link']}><li>About</li></Link>
@@ -30,10 +53,18 @@ export default function Navbar() {
           </ul>
         </div>
       }
+
+      <div className={styles['navbar__search']}>
+        <input type='text' placeholder='search...'
+          className={styles['navbar__search-input']} value={searchValue}
+          onChange={(event) => setSearchValue(event.target.value)}
+          onKeyDown={searchWithEnterHandler} />
+        <FaSearch className={styles['navbar__search-icon']} onClick={searchHandler} />
+      </div>
+
       <div className={styles['navbar__nav-box']}>
         <GiHamburgerMenu className={styles['navbar__hamberger']}
           onClick={() => setTiggleSidebar(prev => !prev)} />
-
         <ul className={styles['navbar__nav']}>
           <Link href={'/'} className={`${styles['navbar__nav-link']} ${styles['navbar__active']}`}><li>Home</li></Link>
           <Link href={'/about'} className={styles['navbar__nav-link']}><li>About</li></Link>
