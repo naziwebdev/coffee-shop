@@ -1,0 +1,67 @@
+.header{
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(rgba(51, 33, 29, .9), rgba(51, 33, 29, .9)), url('/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    padding: 0 1rem;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    background-image: url('/images/overlay-bottom.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 50px;
+    bottom: -35px;
+    z-index: 3;
+}
+
+.header__title{
+    font-size: 3.5rem;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header__breadCrumb{
+    display: flex;
+    column-gap: .6rem;
+}
+
+.header__breadCrumb-item{
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 600;
+}
+
+.header__breadCrumb-divider{
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: 600;
+}
+
+@media only screen and (max-width:768px) {
+
+   .header{
+    height: 350px;
+   }
+
+    .header__title{
+        font-size: 2.5rem;
+    }
+
+    .header__breadCrumb-divider,.header__breadCrumb-item{
+        font-size: 1rem;
+    }
+}

@@ -1,7 +1,10 @@
 import React from 'react'
+import Header from '@/components/modules/Header/Header'
 
-export default function index() {
+export default function About() {
   return (
-    <div>index</div>
+    <div>
+      <Header route={'about'}/>
+    </div>
   )
 }
