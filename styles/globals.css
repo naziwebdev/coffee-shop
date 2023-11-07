@@ -106,6 +106,10 @@ html{
     color: #555;
     text-align: justify;
 }
+
+.link-item{
+	text-decoration: none;
+}
 /*utility class*/
 
 /*responsive*/
