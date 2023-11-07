@@ -1,0 +1,36 @@
+.comments{
+    padding: 14rem 4rem 0 4rem;
+}
+
+
+.comments__wrapper{
+    padding-top: 5rem;
+}
+
+.comments__swiper{
+    padding: 2rem 0;
+    height: 300px;
+}
+
+.comment-empety{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-top: -7rem;
+    line-height: 1.4;
+}
+
+
+@media only screen and (max-width:578px) {
+ 
+    .comments{
+        padding: 14rem 2rem 0 2rem;
+    } 
+}
+
+@media only screen and (max-width:350px) {
+ 
+    .comments{
+        padding: 14rem 1.5rem 0 1.5rem;
+    } 
+}
